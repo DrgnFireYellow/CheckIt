@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CheckIt!</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>   
+        <script src="assets/main.js"></script>
+    </head>
+    <body>
+        <div id="top-bar">
+            <h1 id="app-title">CheckIt!</h1>
+            <div id="status-bar">
+                <span>🔥 <span id="streak-indicator">0</span></span>
+                <span>🪙 <span id="coins-indicator">0</span></span>
+            </div>
+        </div>
+        <div id="quests">
+            <h2>Current Quests</h2>
+            <button id="new-quest-button" onclick="newQuest()">+ Add Quest</button>
+            <ul id="quest-list"></ul>
+        </div>
+    </body>
+</html>
