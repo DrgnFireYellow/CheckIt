@@ -1,6 +1,10 @@
 var userData = JSON.parse(localStorage.getItem("CheckItUserData")) || {streak: 0, last_streak_day: null, coins: 0};
 var quests = JSON.parse(localStorage.getItem("CheckItQuests")) || [];
 
+if (userData.last_streak_day && dayjs().diff(dayjs(userData.last_streak_day), "day") >= 2) {
+    userData.streak = 0
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(SplitText);
     displayQuests()
