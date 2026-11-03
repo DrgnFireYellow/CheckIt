@@ -42,7 +42,7 @@ function saveQuests() {
 function newQuest() {
     const task = prompt("Task to complete the quest:");
     
-    if (task == null || task.strip() === "") {
+    if (task == null || task.trim() === "") {
         return;
     }
 
